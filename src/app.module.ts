@@ -14,15 +14,15 @@ import { UserRoles } from './roles/user-roles.model';
   providers: [],
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `.${process.env.NODE_ENV}.env`,
+      envFilePath: `.env`,
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      host: process.env.POSTGRES_HOST,
-      port: Number(process.env.POSTGRES_PORT),
-      username: process.env.POSTGRES_USER,
-      password: String(process.env.POSTGRES_PWD),
-      database: process.env.POSTGRES_DB,
+      host: process.env.DB_HOST,
+      port: Number(process.env.DB_PORT),
+      username: process.env.DB_USER,
+      password: String(process.env.DB_PASSWORD),
+      database: process.env.DB_NAME,
       models: [User, Role, UserRoles],
       autoLoadModels: true,
     }),
