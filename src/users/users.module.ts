@@ -11,6 +11,7 @@ import { AuthModule } from 'src/auth/auth.module';
 @Module({
   controllers: [UsersController],
   providers: [UsersService],
+  // eslint-disable-next-line prettier/prettier
   imports: [SequelizeModule.forFeature([User, Role, UserRoles]), RolesModule, forwardRef(() => AuthModule)],
   exports: [UsersService],
 })

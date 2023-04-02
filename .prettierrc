@@ -1,6 +1,11 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
+  "extends": ["plugin:prettier/recommended"],
+  "bracketSpacing": true,
+  "bracketLine": false,
   "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "singleQuote": false,
+  "semicolons": true,
   "printWidth": 200
 }
